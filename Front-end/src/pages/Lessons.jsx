@@ -5,7 +5,7 @@ function Lessons() {
   return (
     <>
     <div><Navbar/></div>
-    <div>Lessons</div>
+    <div className="pt-28">Lessons</div>
     </>
   )
 }
