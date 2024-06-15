@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../Components/Navbar";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
+import { FaArrowRight } from "react-icons/fa";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../index.css";
@@ -55,10 +56,10 @@ function Home() {
             src="src/images/Slide1.jpg"
             className="w-full h-full object-cover"
           />
-          <Link to = "/lessons">
-          <button className="absolute bottom-10 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#156b9a9c] text-white p-2 sm:p-3 md:p-5 text-sm sm:text-base md:text-lg rounded hover:bg-blue-400 cursor-pointer">
-            Start Learning
-          </button>
+          <Link to="/lessons">
+            <button className="absolute bottom-10 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-purple-500 text-white p-2 sm:p-3 md:p-5 text-sm sm:text-base md:text-lg rounded hover:bg-purple-600 cursor-pointer">
+              Start Learning
+            </button>
           </Link>
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
             <a href="#slide3" className="btn btn-circle">
@@ -74,10 +75,10 @@ function Home() {
             src="src/images/Slide2.jpg"
             className="w-full h-full object-cover"
           />
-          <Link to = "/quiz">
-          <button className="absolute bottom-10 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#156b9a9c] text-white p-2 sm:p-3 md:p-5 text-sm sm:text-base md:text-lg rounded hover:bg-blue-400 cursor-pointer">
-            Start Quiz
-          </button>
+          <Link to="/quiz">
+            <button className="absolute bottom-10 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-purple-500 text-white p-2 sm:p-3 md:p-5 text-sm sm:text-base md:text-lg rounded hover:bg-purple-600 cursor-pointer">
+              Start Quiz
+            </button>
           </Link>
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
             <a href="#slide1" className="btn btn-circle">
@@ -93,10 +94,10 @@ function Home() {
             src="src/images/Slide3.jpg"
             className="w-full h-full object-cover"
           />
-          <Link to = "/login">
-          <button className="absolute bottom-10 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#156b9a9c] text-white p-2 sm:p-3 md:p-5 text-sm sm:text-base md:text-lg rounded hover:bg-blue-400 cursor-pointer">
-            User Profile
-          </button>
+          <Link to="/login">
+            <button className="absolute bottom-10 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-purple-500 text-white p-2 sm:p-3 md:p-5 text-sm sm:text-base md:text-lg rounded hover:bg-purple-600 cursor-pointer">
+              User Profile
+            </button>
           </Link>
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
             <a href="#slide2" className="btn btn-circle">
@@ -106,7 +107,7 @@ function Home() {
               ❯
             </a>
           </div>
-        </div> 
+        </div>
       </div>
 
       {/* ---------------------------- About Section ---------------------------- */}
@@ -138,13 +139,13 @@ function Home() {
 
       <hr className=" border-purple-300 my-10 ml-10 mr-10" />
 
-      <h1 className=" mb-20 font-bold text-center font-serif text-2xl">
+      <h1 className=" mb-20 font-extrabold text-center font-serif text-4xl">
         About Lessons
       </h1>
 
       {/* ---------------------------- Image Card Slider ---------------------------- */}
 
-      <div className="mt-5 w-3/4 m-auto">
+      <div className="mt-5 w-3/4 m-auto mb-9">
         <div className="mt-auto">
           <Slider {...settings}>
             {data.map((d) => (
@@ -160,11 +161,55 @@ function Home() {
           </Slider>
         </div>
       </div>
+
+      {/* ---------------------------- Quiz Section ---------------------------- */}
+
+      <hr className=" border-purple-300 my-16 ml-10 mr-10" />
+      <h1 className=" mb-10 font-extrabold text-center font-serif text-4xl">
+        About Quiz
+      </h1>
+
+      <div className=" mt-5 mb-5 flex items-center justify-between bg-slate-200 text-white p-14">
+        <div className=" ml-20 flex items-center md:ml-10 sm:ml-5 xs:ml-1 xs:font-light">
+          <div className="bg-purple-500 text-white rounded-full p-2 mr-3">
+            <span className="block w-6 h-6 text-center">?</span>
+          </div>
+          <Link to="/quiz">
+            <span className="custom-font font-serif text-black hover:text-purple-500 cursor-pointer sm:text-sm md:text-lg lg:text-xl xl:text-2xl">
+              Take Quiz
+            </span>
+          </Link>
+        </div>
+        <div className="text-white">
+          <span className="block w-6 h-6 text-center text-purple-500 arrow-container">
+            <FaArrowRight />
+          </span>
+        </div>
+      </div>
+
+      {/* ---------------------------- Email Section ---------------------------- */}
+
+      <div className="bg-white p-10 mt-7 shadow-2xl rounded-lg mx-auto max-w-lg text-center transition-transform transform hover:scale-105">
+        <h2 className="text-4xl font-extrabold text-purple-500 mb-4">
+          Looking for something?
+        </h2>
+        <p className="text-gray-700 mb-6">
+          If you've got feedback or an idea that you think we should be working
+          on, shoot us an email!
+        </p>
+        <a href="mailto:fypqsl@gmail.com">
+        <button className="bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-800 text-white font-bold py-2 px-6 rounded-full shadow-lg transition-colors duration-300">
+          Email us!
+        </button>
+        </a>
+      </div>
     </>
   );
 }
 
-{/* ----- Data for image card lessons ----- */}
+{
+  /* ----- Data for image card lessons ----- */
+}
 const data = [
   {
     title: "Lesson 1",
