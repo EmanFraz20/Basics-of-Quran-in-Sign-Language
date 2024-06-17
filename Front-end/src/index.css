@@ -1,3 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
 @tailwind base;
 @tailwind components;
-@tailwind utilities; 
+@tailwind utilities;
+
+body {
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+.fixed-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure it appears above other content */
+    background-color: #fff; /* Set background color to avoid transparency */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
+}
+
+
+.slick-slide > div {
+    margin: 0 10px;
+}
+
+.slick-next {
+    right: -40px !important;
+    font-weight: bold !important;
+    font-color: red;
+}
+
+.slick-prev {
+    font-weight: bold !important;
+    font-color: red;
+}
+
+
+
+.custom-font{
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.arrow-container {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .arrow-container:hover {
+    transform: translateX(5px); /* Adjust the value to control the distance of the movement */
+  }
+
+  @media (min-width: 360px) {
+    .xs\:ml-1 {
+        margin-left: 0.25rem;
+
+    }
+}
+
+
+
+
