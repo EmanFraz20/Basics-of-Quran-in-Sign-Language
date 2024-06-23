@@ -145,11 +145,11 @@ function Home() {
 
       {/* ---------------------------- Image Card Slider ---------------------------- */}
 
-      <div className="mt-5 w-3/4 m-auto mb-9">
+           <div className="mt-5 w-3/4 m-auto mb-9">
         <div className="mt-auto">
           <Slider {...settings}>
-            {data.map((d) => (
-              <div className=" bg-slate-200 text-black rounded-lg">
+            {data.map((d, index) => ( /* Added key prop */
+              <div key={index} className=" bg-slate-200 text-black rounded-lg"> 
                 <div className=" h-20 rounded-t-xl bg-purple-400 flex justify-center items-center">
                   <p className="text-xl font-semibold">{d.title}</p>
                 </div>

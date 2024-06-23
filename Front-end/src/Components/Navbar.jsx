@@ -42,7 +42,7 @@ function Navbar() {
             <div className="dropdown">
               <div
                 tabIndex={0}
-                role="button"cd
+                role="button"
                 className="btn btn-ghost lg:hidden"
               >
                 <svg
@@ -67,8 +67,8 @@ function Navbar() {
                 {navItems}
               </ul>
             </div>
-            <Link to="/">
-              <a className=" text-2xl font-bold cursor-pointer">NQSL</a>
+            <Link to="/" className=" text-2xl font-bold cursor-pointer">
+            NQSL
             </Link>
           </div>
           <div className="navbar-end space-x-8">
@@ -78,10 +78,10 @@ function Navbar() {
               </ul>
             </div>
             <div className="">
-              <Link to="/login">
-                <a className=" bg-purple-500 text-white px-3 py-2 rounded-md hover:bg-purple-600 duration-300 cursor-pointer">
+              <Link to="/signup">
+                <span className=" bg-purple-500 text-white px-3 py-2 rounded-md hover:bg-purple-600 duration-300 cursor-pointer">
                   Login
-                </a>
+                </span>
               </Link>
             </div>
           </div>

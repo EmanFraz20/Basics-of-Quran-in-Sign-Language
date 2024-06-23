@@ -4,10 +4,12 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Lessons from "./pages/Lessons";
 import Quiz from "./pages/Quiz"
-import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
+import SignIn from "./pages/SignIn";
 
 
 function App() {
+  
   return (
     <BrowserRouter>
     <Routes>
@@ -15,7 +17,8 @@ function App() {
       <Route path="/about" element={<About />} />
       <Route path="/lessons" element={<Lessons />} />
       <Route path="/quiz" element={<Quiz />} />
-      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<SignUp />} />
+      <Route path="/signin" element={<SignIn />} />
 
     </Routes>
     </BrowserRouter>
