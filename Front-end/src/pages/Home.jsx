@@ -6,6 +6,7 @@ import { FaArrowRight } from "react-icons/fa";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../index.css";
+import Footer from "../Components/Footer";
 
 function Home() {
   var settings = {
@@ -188,7 +189,7 @@ function Home() {
       </div>
 
       {/* ---------------------------- Email Section ---------------------------- */}
-
+      
       <div className="bg-white p-10 mt-7 shadow-2xl rounded-lg mx-auto max-w-lg text-center transition-transform transform hover:scale-105">
         <h2 className="text-4xl font-extrabold text-purple-500 mb-4">
           Looking for something?
@@ -203,6 +204,7 @@ function Home() {
         </button>
         </a>
       </div>
+        <Footer />
     </>
   );
 }
@@ -228,6 +230,7 @@ const data = [
     content: "Basics of Tanveen",
   },
 ];
+
 
 export default Home;
 

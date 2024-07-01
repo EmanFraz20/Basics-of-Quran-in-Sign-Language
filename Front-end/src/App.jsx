@@ -7,10 +7,10 @@ import Quiz from "./pages/Quiz"
 import SignUp from "./pages/SignUp";
 import SignIn from "./pages/SignIn";
 
-
 function App() {
   
   return (
+    //<div className="w-full h-screen">
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home />} />
@@ -22,6 +22,7 @@ function App() {
 
     </Routes>
     </BrowserRouter>
+    //</div>
   )
 }
 

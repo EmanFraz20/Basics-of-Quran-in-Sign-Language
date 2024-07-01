@@ -67,8 +67,8 @@ function Navbar() {
                 {navItems}
               </ul>
             </div>
-            <Link to="/" className=" text-2xl font-bold cursor-pointer">
-            NQSL
+            <Link to="/" className=" bg-dark-bckground text-2xl font-bold cursor-pointer">
+            BQSL
             </Link>
           </div>
           <div className="navbar-end space-x-8">
@@ -89,5 +89,5 @@ function Navbar() {
       </div>
     </>
   );
-}
+};
 export default Navbar;

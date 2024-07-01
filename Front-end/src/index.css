@@ -5,11 +5,42 @@
 @tailwind utilities;
 
 body {
-    font-family: 'Poppins', sans-serif;  
+    font-family: 'Poppins', sans-serif;
+    //background-color: hsl(226, 83%, 7%);
 }
 
 
+
+
+.wave-divider {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.wave-divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 76px;
+}
+
+.wave-divider .shape-fill {
+    fill: #A855F7;
+}
+
+
+
+
+
 .fixed-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: fixed;
     top: 0;
     left: 0;
