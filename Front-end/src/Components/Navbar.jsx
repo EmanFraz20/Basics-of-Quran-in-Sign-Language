@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import "../index.css";
 
 function Navbar() {
-  
+  const { currentUser } = useSelector((state) => state.user);
   const navItems = (
     <>
       <Link
@@ -35,14 +36,14 @@ function Navbar() {
   );
   return (
     <>
-      <div className= "max-w-screen-2xl container mx-auto md:px-20 px-4 fixed-navbar z-50"
-      >
+      <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 fixed-navbar z-50 3xl">
         <div className="navbar bg-base-100">
           <div className="navbar-start">
             <div className="dropdown">
               <div
                 tabIndex={0}
-                role="button"cd
+                role="button"
+                cd
                 className="btn btn-ghost lg:hidden"
               >
                 <svg
@@ -67,8 +68,8 @@ function Navbar() {
                 {navItems}
               </ul>
             </div>
-            <Link to="/">
-              <a className=" text-2xl font-bold cursor-pointer">NQSL</a>
+            <Link to="/" className=" text-2xl font-bold cursor-pointer">
+              NQSL
             </Link>
           </div>
           <div className="navbar-end space-x-8">
@@ -78,11 +79,22 @@ function Navbar() {
               </ul>
             </div>
             <div className="">
-              <Link to="/login">
-                <a className=" bg-purple-500 text-white px-3 py-2 rounded-md hover:bg-purple-600 duration-300 cursor-pointer">
+              {currentUser ? (
+                <Link to="/profile" className="cursor-pointer">
+                  <img
+                    src={currentUser.profilePicture}
+                    alt="profile"
+                    className="h-8 w-8 rounded-full object-cover"
+                  />
+                </Link>
+              ) : (
+                <Link
+                  to="/signup"
+                  className="bg-purple-500 text-white px-3 py-2 rounded-md hover:bg-purple-600 duration-300 cursor-pointer"
+                >
                   Login
-                </a>
-              </Link>
+                </Link>
+              )}
             </div>
           </div>
         </div>

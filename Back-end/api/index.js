@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import userRoutes from './routes/user.route.js';
 import authRoutes from './routes/auth.route.js';
+import cookieParser from 'cookie-parser';
 const app = express()
 
 dotenv.config();
@@ -18,6 +19,8 @@ mongoose.connect(process.env.MONGO).then(() => {
   
 //allow JSON as the input to our backend
 app.use(express.json());
+
+app.use(cookieParser());
 
 app.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}`)
