@@ -36,6 +36,8 @@ export const signin = async (req, res, next) => {
   }
 };
 
+// Function to handle Google authentication
+
 export const googleAuth = async (req, res, next) => {
   try {
     const user = await User.findOne({ email: req.body.email });
@@ -73,6 +75,8 @@ export const googleAuth = async (req, res, next) => {
     next(error);
   }
 };
+
+// Function to handle User Signout
 
 export const signout = (req, res) => {
   res.clearCookie('access_token').status(200).json('Signout Success!');
