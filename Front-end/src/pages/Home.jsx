@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
@@ -46,7 +47,7 @@ function Home() {
 
   return (
     <>
-<div>
+      <div>
         <Navbar />
       </div>
 
@@ -133,7 +134,6 @@ function Home() {
         <div className="w-full md:w-3/4 lg:w-2/3 lg:ml-16 xl:w-1/3 p-4 md:p-6 lg:p-8">
           <video className="w-full lg:h-72" controls>
             <source src="video.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
           </video>
         </div>
       </div>
@@ -199,12 +199,12 @@ function Home() {
           on, shoot us an email!
         </p>
         <a href="mailto:fypqsl@gmail.com">
-        <button className="bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-800 text-white font-bold py-2 px-6 rounded-full shadow-lg transition-colors duration-300">
-          Email us!
-        </button>
+          <button className="bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-800 text-white font-bold py-2 px-6 rounded-full shadow-lg transition-colors duration-300">
+            Email us!
+          </button>
         </a>
       </div>
-        <Footer />
+      <Footer />
     </>
   );
 }
@@ -233,4 +233,3 @@ const data = [
 
 
 export default Home;
-
