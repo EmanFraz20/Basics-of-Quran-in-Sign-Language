@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "name": "ا",
+        "image": "https://images.pexels.com/photos/28299428/pexels-photo-28299428/free-photo-of-alif-sign.png?auto=compress&cs=tinysrgb&w=400&lazy=load"
+    },
+    {
+        "id": 2,
+        "name": "ﺏ",
+        "image": "https://images.pexels.com/photos/28299891/pexels-photo-28299891/free-photo-of-beh.png?auto=compress&cs=tinysrgb&w=400&lazy=load"
+    },
+    {
+        "id": 3,
+        "name": "ﺕ",
+        "image": "https://images.pexels.com/photos/28300062/pexels-photo-28300062/free-photo-of-teh.png?auto=compress&cs=tinysrgb&w=400&lazy=load"
+    },
+    {
+        "id": 4,
+        "name": "ﺙ",
+        "image": "https://images.pexels.com/photos/28300171/pexels-photo-28300171/free-photo-of-theh-sign.png?auto=compress&cs=tinysrgb&w=400&lazy=load"
+    },
+    {
+        "id": 5,
+        "name": "ﺝ",
+        "image": "https://images.pexels.com/photos/28300196/pexels-photo-28300196/free-photo-of-jeem-sign.png?auto=compress&cs=tinysrgb&w=400&lazy=load"
+    },
+    {
+        "id": 6,
+        "name": "ﺡ",
+        "image": "https://images.pexels.com/photos/28300200/pexels-photo-28300200/free-photo-of-hah-sign.png?auto=compress&cs=tinysrgb&w=400&lazy=load"
+    },
+    {
+        "id": 7,
+        "name": "ﺥ",
+        "image": "https://images.pexels.com/photos/28300236/pexels-photo-28300236/free-photo-of-khah-sign.png?auto=compress&cs=tinysrgb&w=400&lazy=load"
+    }
+]

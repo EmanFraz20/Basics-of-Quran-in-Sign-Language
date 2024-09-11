@@ -15,6 +15,7 @@ import lesson from "../images/lesson.gif";
 import { slideUpVariants, zoomInVariants } from "./animation";
 import { motion } from "framer-motion";
 
+
 function Home() {
   var settings = {
     dots: true,
@@ -156,8 +157,9 @@ function Home() {
         <div className="mt-auto">
           <Slider {...settings}>
             {data.map((d) => (
-              <div className="bg-slate-200 text-black rounded-lg transform transition-transform duration-300 hover:scale-100 hover:bg-slate-300">
-                <div className="h-20 rounded-t-xl bg-purple-400 flex justify-center items-center">
+              <div
+              className="bg-slate-200 text-black rounded-lg transform transition-transform duration-300 hover:scale-100 hover:bg-slate-300">
+              <div className="h-20 rounded-t-xl bg-purple-400 flex justify-center items-center">
                   <p className="text-xl font-semibold">{d.title}</p>
                 </div>
                 <div className="h-36 flex flex-col justify-center items-center gap-4 p-4">
@@ -207,7 +209,7 @@ function Home() {
       </div>
 
       {/* ---------------------------- Email Section ---------------------------- */}
-
+      
       <div className="bg-white p-10 mt-7 shadow-2xl rounded-lg mx-auto max-w-lg text-center transition-transform transform hover:scale-105">
         <h2 className="text-4xl font-extrabold text-purple-500 mb-4">
           Looking for something?
@@ -248,5 +250,6 @@ const data = [
     content: "ﻙ-ﻱ",
   },
 ];
+
 
 export default Home;
