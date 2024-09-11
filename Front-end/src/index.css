@@ -9,31 +9,6 @@ body {
     //background-color: hsl(226, 83%, 7%);
 }
 
-.wave-divider {
-    position: absolute;
-    bottom: 100%;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-}
-
-.wave-divider svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 76px;
-}
-
-.wave-divider .shape-fill {
-    fill: #A855F7;
-}
-
-
-
-
-
 
 .wave-divider {
     position: absolute;
@@ -56,8 +31,26 @@ body {
     fill: #A855F7;
 }
 
+.wave-divider {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
 
+.wave-divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 76px;
+}
 
+.wave-divider .shape-fill {
+    fill: #A855F7;
+}
 
 
 .fixed-navbar {
@@ -79,7 +72,6 @@ body {
 }
 
 
-
 .slick-prev:before, .slick-next:before {
     font-family: 'slick';
     font-size: 20px;
@@ -87,7 +79,6 @@ body {
     opacity: .75;
     color: purple;
 }
-
 
 
 .custom-font{
@@ -112,5 +103,13 @@ body {
 }
 
 
+ul {
+    list-style-type: disc;
+
+  }
+
+  ul > li::marker {
+    font-weight: bold;
+  }
 
 

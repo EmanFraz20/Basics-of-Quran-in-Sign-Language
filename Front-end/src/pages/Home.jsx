@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "../Components/Navbar";
-import Footer from "../Components/Footer";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
