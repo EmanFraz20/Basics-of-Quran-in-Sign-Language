@@ -8,6 +8,7 @@ function SignUp() {
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
@@ -56,14 +57,14 @@ function SignUp() {
           type='email' 
           placeholder='Email' 
           id='email' 
-          className='bg-slate-100 p-3 rounded-lg'
+          className='bg-slate-100 p-3 rounded-lg' required
           onChange={handleChange} 
         />
         <input 
         type='password' 
         placeholder='Password' 
         id='password' 
-        className='bg-slate-100 p-3 rounded-lg'
+        className='bg-slate-100 p-3 rounded-lg' 
         onChange={handleChange} 
       />
         <button disabled={loading} className='bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80'>

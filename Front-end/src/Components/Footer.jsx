@@ -33,7 +33,7 @@ import Divider from "./Divider";
 
 const Footer = () => {
   return (
-    <div className="w-full flex relative flex-col mt-16 text-white">
+    <div className="w-full flex relative flex-col mt-24 text-white">
       <div className="w-full h-1/6 py-2 bg-purple-500">
         <div className="grid lg:grid-row-4 md:grid-row-2 grid-row-1 py-5">
           <div className="flex flex-col gap-1 items-center justify-center">
