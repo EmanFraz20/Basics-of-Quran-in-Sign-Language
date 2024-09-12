@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import About from "./pages/About";
 import Lessons from "./pages/Lessons";
 import Quiz from "./pages/Quiz";
 import QuizStart from "./pages/QuizStart";
@@ -24,8 +23,6 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/lessons" element={<Lessons />} />
         <Route path="/quiz" element={<Quiz /> } />
         <Route path="/quizstart" element={<CheckUserExist><QuizStart /></CheckUserExist>} />
         <Route path="/questions" element={<Questions />} />
@@ -40,6 +37,9 @@ function App() {
         <Route path="/fetchquestion" element={<FetchQuestion />} />
         <Route element={<PrivateRoute />}>
           <Route path="/profile" element={<Profile />} />
+        </Route>
+        <Route element={<PrivateRoute />}>
+        <Route path="/lessons" element={<Lessons />} />
         </Route>
       </Routes>
     </BrowserRouter>

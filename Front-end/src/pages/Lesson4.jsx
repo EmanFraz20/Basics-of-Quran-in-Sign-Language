@@ -5,6 +5,7 @@ import axios from 'axios';
 import { Link } from "react-router-dom";
 import Footer1 from '../Components/Footer1';
 
+
 function Lesson4() {
   useEffect(() => {
     window.scrollTo(0,0);
@@ -62,8 +63,6 @@ function Lesson4() {
          </div>
        </div>
     </div>
-
-
       </div>
     <Footer1/>
     </>

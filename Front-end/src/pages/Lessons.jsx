@@ -9,6 +9,7 @@ function Lessons() {
   useEffect(() => {
     window.scrollTo(0,0);
   }, []);
+
   //Call Backend API by defining state to get the data
   const [lesson, setLesson] = useState([]);
   useEffect(() => {
@@ -46,8 +47,7 @@ function Lessons() {
       </div>
 
 
-
-      <div className="flex flex-1 px-4 py-3 mt-10 mb-18 bg-white border-t border-gray-200 shadow-md sm:px-6">
+    <div className="flex flex-1 px-4 py-3 mt-10 mb-18 bg-white border-t border-gray-200 shadow-md sm:px-6">
     <div className="flex justify-between flex-1 sm:hidden">
         <button type="button" className="relative inline-flex items-center px-2 py-2 text-sm 5xl:text-xl font-medium text-gray-700 bg-white border border-gray-300 rounded-md sm:rounded-none hover:bg-gray-50 opacity-50 cursor-not-allowed" data-id="pagination-prev" disabled=""><svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 20 20" className="w-5 h-5" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd"></path></svg> Previous</button>
         <Link to="/lesson2">
@@ -63,7 +63,6 @@ function Lessons() {
         </div>
     </div>
 </div>
-
       </div>
       <Footer1/>
     </>

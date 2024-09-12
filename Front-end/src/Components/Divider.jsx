@@ -1,5 +1,6 @@
 import React from "react";
 
+
 // This is a functional React component called Divider
 function Divider() {
   return (

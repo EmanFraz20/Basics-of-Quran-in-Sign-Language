@@ -18,6 +18,7 @@ import {
   deleteUserFailure,
   signOut,
 } from "../Redux/user/userSlice";
+import LogoutModal from '../Components/LogoutModal';
 
 export default function Profile() {
   const dispatch = useDispatch();
@@ -27,6 +28,7 @@ export default function Profile() {
   const [imageError, setImageError] = useState(false);
   const [formData, setFormData] = useState({});
   const [updateSuccess, setUpdateSuccess] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const { currentUser, loading, error } = useSelector((state) => state.user);
   useEffect(() => {
@@ -65,9 +67,9 @@ export default function Profile() {
     try {
       dispatch(updateUserStart());
       const res = await fetch(`/api/user/update/${currentUser._id}`, {
-        method: "POST",
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
       });
@@ -82,7 +84,7 @@ export default function Profile() {
       dispatch(updateUserFailure(error));
     }
   };
-
+  
   const handleDeleteAccount = async () => {
     try {
       dispatch(deleteUserStart());
@@ -108,12 +110,26 @@ export default function Profile() {
       console.log(error);
     }
   };
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleConfirmLogout = async () => {
+    handleCloseModal(); // Close modal before logging out
+    await handleSignOut();
+  };
+
   return (
     <>
       <div>
         <Navbar />
       </div>
-      <div className="p-3 max-w-lg mx-auto">
+      <div className="p-3 pt-16 max-w-lg mx-auto">
         <h1 className="text-3xl font-semibold text-center my-7">Profile</h1>
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <input
@@ -184,7 +200,7 @@ export default function Profile() {
           >
             Delete Account
           </span>
-          <span onClick={handleSignOut} className="text-red-700 cursor-pointer">
+          <span onClick={handleOpenModal} className="text-red-700 cursor-pointer">
             Sign out
           </span>
         </div>
@@ -192,6 +208,11 @@ export default function Profile() {
         <p className="text-green-700 mt-5">
           {updateSuccess && "User is updated successfully!"}
         </p>
+        <LogoutModal 
+          isOpen={isModalOpen} 
+          onClose={handleCloseModal} 
+          onConfirm={handleConfirmLogout} 
+        />
       </div>
     </>
   );

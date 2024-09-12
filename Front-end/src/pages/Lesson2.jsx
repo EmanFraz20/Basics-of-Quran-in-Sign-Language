@@ -5,6 +5,7 @@ import axios from 'axios';
 import { Link } from "react-router-dom";
 import Footer1 from '../Components/Footer1';
 
+
 function Lesson2() {
   useEffect(() => {
     window.scrollTo(0,0);
@@ -27,8 +28,7 @@ function Lesson2() {
   return (
     <>
     <Navbar/>
-    <div className='min-h-screen
-    '>
+    <div className='min-h-screen'>
       <div className='max-w-screen-2xl container mx-auto md:px-20 px-4'>
       <div className="max-w-3xl mx-auto text-center mt-20 pt-6">
         <h1 className="text-4xl font-bold text-gray-900 leading-tight mb-2 pb-4 relative">
@@ -47,7 +47,6 @@ function Lesson2() {
       </div>
 
 
-    
       <div className="flex flex-1 px-4 py-3 mt-10 mb-24 bg-white border-t border-gray-200 shadow-md sm:px-6">
     <div className="flex justify-between flex-1 sm:hidden">
          <Link to="/lessons">
@@ -68,7 +67,6 @@ function Lesson2() {
         </div>
     </div>
 </div>
-
       </div>
     <Footer1/>
     </>
