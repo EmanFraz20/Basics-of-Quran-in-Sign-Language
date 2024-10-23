@@ -23,7 +23,9 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/quiz" element={<Quiz /> } />
+        <Route element={<PrivateRoute />}>
+          <Route path="/quiz" element={<Quiz />} />
+        </Route>
         <Route path="/quizstart" element={<CheckUserExist><QuizStart /></CheckUserExist>} />
         <Route path="/questions" element={<Questions />} />
         <Route path="/result" element={<CheckUserExist><Result/></CheckUserExist>} />
@@ -31,7 +33,9 @@ function App() {
         <Route path="/lesson2" element={<Lesson2 />} />
         <Route path="/lesson3" element={<Lesson3 />} />
         <Route path="/lesson4" element={<Lesson4 />} />
-        <Route path="/quiz" element={<Quiz />} />
+        <Route element={<PrivateRoute />}>
+          <Route path="/profile" element={<Profile />} />
+        </Route>
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/fetchquestion" element={<FetchQuestion />} />

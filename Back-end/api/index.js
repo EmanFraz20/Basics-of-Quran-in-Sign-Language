@@ -10,7 +10,16 @@ import lessonRoute2 from './routes/lesson2.route.js';
 import lessonRoute3 from './routes/lesson3.route.js';
 import lessonRoute4 from './routes/lesson4.route.js';
 import cookieParser from 'cookie-parser';
+import path from 'path';
+
+const __dirname = path.resolve();
+
 const app = express()
+
+app.use(express.static(path.join(__dirname, '/Front-end/dist')))
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'Front-end', 'dist', 'index.html'))
+});
 
 dotenv.config();
 

@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon api/index.js",
-    "start": "nodemon api/index.js"
+    "start": "nodemon api/index.js",
+    "build": "npm install && npm install --prefix Front-end && npm run build --prefix Front-end"
   },
   "repository": {
     "type": "git",
