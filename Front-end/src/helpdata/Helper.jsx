@@ -2,14 +2,11 @@ import { useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
 import axios from 'axios';
 
-export function CheckUserExist({children}){
-    const auth=useSelector(state=>state.result.userId)
-   return auth? children :<Navigate to={'/quiz'} replace={true}> </Navigate>
-}
+
 
 export async function getServerData(url,callback){
-    const data=await (await axios.get(url))?.data;
-    return callback? callback(data):data;
+    const res=await axios.get(url);
+    return callback? callback(res.data):res.data;
 }
 
 export async function postServerData(url,result,callback){

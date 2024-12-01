@@ -156,17 +156,29 @@ function Home() {
       <div className="mt-5 w-3/4 m-auto mb-16">
         <div className="mt-auto">
           <Slider {...settings}>
-            {data.map((d) => (
-              <div
-              className="bg-slate-200 text-black rounded-lg transform transition-transform duration-300 hover:scale-100 hover:bg-slate-300">
-              <div className="h-20 rounded-t-xl bg-purple-400 flex justify-center items-center">
-                  <p className="text-xl font-semibold">{d.title}</p>
-                </div>
-                <div className="h-36 flex flex-col justify-center items-center gap-4 p-4">
-                  <p className="text-2xl">{d.content}</p>
-                </div>
-              </div>
-            ))}
+            {data.map((d, index) => {
+              // Determine the route for each lesson
+              const lessonRoutes = [
+                "/lessons",
+                "/lesson2",
+                "/lesson3",
+                "/lesson4",
+              ];
+              return (
+                <Link
+                  key={index}
+                  to={lessonRoutes[index]} // Use the route from the array
+                  className="bg-slate-200 text-black rounded-lg transform transition-transform duration-300 hover:scale-100 hover:bg-slate-300"
+                >
+                  <div className="h-20 rounded-t-xl bg-purple-400 flex justify-center items-center">
+                    <p className="text-xl font-semibold">{d.title}</p>
+                  </div>
+                  <div className="h-36 flex flex-col justify-center items-center gap-4 p-4">
+                    <p className="text-2xl">{d.content}</p>
+                  </div>
+                </Link>
+              );
+            })}
           </Slider>
         </div>
       </div>

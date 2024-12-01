@@ -10,7 +10,7 @@ import ResultTable from "./pages/ResultTable";
 import SignUp from "./pages/SignUp";
 import SignIn from "./pages/SignIn";
 import FetchQuestion from "./hooks/FetchQuestion"
-import {CheckUserExist } from "./helpdata/Helper"
+
 import Profile from "./pages/Profile";
 import PrivateRoute from "./Components/PrivateRoute";
 import Lesson2 from "./pages/Lesson2";
@@ -26,9 +26,9 @@ function App() {
         <Route element={<PrivateRoute />}>
           <Route path="/quiz" element={<Quiz />} />
         </Route>
-        <Route path="/quizstart" element={<CheckUserExist><QuizStart /></CheckUserExist>} />
+        <Route path="/quizstart" element={<QuizStart />} />
         <Route path="/questions" element={<Questions />} />
-        <Route path="/result" element={<CheckUserExist><Result/></CheckUserExist>} />
+        <Route path="/result" element={<Result />}/>
         <Route path="/resulttable"element={<ResultTable />}/>
         <Route path="/lesson2" element={<Lesson2 />} />
         <Route path="/lesson3" element={<Lesson3 />} />

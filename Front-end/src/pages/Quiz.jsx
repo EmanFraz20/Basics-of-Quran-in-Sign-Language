@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useDispatch } from 'react-redux';
 import { setUserId } from '../Redux/result-reducer';
 import '../index.css'
-
+import Navbar from '../Components/Navbar'
 
 export default function Quiz() {
   const inputRef = useRef(null);
@@ -17,6 +17,7 @@ export default function Quiz() {
 
   return (
     <>
+    <Navbar />
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-gray-50 via-purple-500 to-gray-100 text-gray-800">
       <div className="bg-white bg-opacity-100 p-10 rounded-xl shadow-lg text-center w-11/12 md:w-3/5 lg:w-2/5">
         <h1 className="text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
