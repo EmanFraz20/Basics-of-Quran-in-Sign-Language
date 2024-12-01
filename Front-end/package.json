@@ -1,6 +1,5 @@
 {
-  "name": "bqsl",
-  "homepage" : "https://EmanFraz20.github.io/Basics-of-Quran-in-Sign-Language/",
+  "name": "front-end",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,9 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d dist"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.5",
@@ -27,7 +24,8 @@
     "react-slick": "^0.30.2",
     "redux-persist": "^6.0.0",
     "rimraf": "^5.0.7",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "cookie-parser": "^1.4.6"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
